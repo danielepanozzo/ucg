@@ -3,7 +3,6 @@ project(assignment4)
 
 # Project sources
 add_executable(${PROJECT_NAME}
-	src/solution.cpp
 	src/stb_image_write.h
 	src/utils.h
 )
