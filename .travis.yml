@@ -1,0 +1,108 @@
+language: cpp
+sudo: false
+matrix:
+  include:
+    - os: linux
+      script:
+        - git submodule update --init --recursive
+        - mkdir ext/glfw/include/GL
+        - wget --no-check-certificate -P ext/glfw/include/GL https://www.opengl.org/registry/api/GL/glcorearb.h
+        - cd Assignment_1
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_2
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_3
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_4
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_5
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_6
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_7
+        - mkdir build
+        - cd build
+        - cmake  ../
+        - make -j 2
+        - cd ../../
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
+          packages:
+            - xorg-dev
+            - libglu1-mesa-dev
+            - g++-4.8
+            - cmake
+            - cmake-data
+    - os: osx
+      compiler: clang
+      script:
+        - git submodule update --init --recursive
+        - cd Assignment_1
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_2
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_3
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_4
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_5
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_6
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../
+        - cd Assignment_7
+        - mkdir build
+        - cd build
+        - cmake ../
+        - make -j 2
+        - cd ../../

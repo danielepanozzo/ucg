@@ -1,0 +1,2 @@
+- Add a ground?
+- Implement ambient occlusion

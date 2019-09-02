@@ -1,0 +1,68 @@
+version: 1.0.{build}
+os: Visual Studio 2015
+test: off
+clone_folder: C:\projects\ucg
+branches:
+  only:
+    - master
+install:
+  - git submodule update --init --recursive
+  - cinstall: python
+build_script:
+  - echo Running cmake...
+  - cd c:\projects\ucg\Assignment_1
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment1.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_2
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment2.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_3
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment3.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_4
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment4.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_5
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment5.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_6
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment6.sln
+  - cd ../../
+  - cd c:\projects\ucg\Assignment_7
+  - mkdir build
+  - cd build
+  - cmake -G "Visual Studio 14 2015 Win64" ../
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - set MSBuildOptions=/v:m /p:Configuration=Debug /logger:%MSBuildLogger%
+  - msbuild %MSBuildOptions% assignment7.sln
+  - cd ../../
