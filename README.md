@@ -121,13 +121,15 @@ The course schedule is tentative and *will* be adjusted along the way.
 
 **Week 15: Final Exam**
 
-<!-- Week 1:
 
 ## Assignments
 
-Assignment 1: Introduction to C++, Geometry (Optional)
+[General Instructions](https://github.com/danielepanozzo/ucg/tree/master/RULES.md)
 
-Week 3:
+[Assignment 1: Introduction to C++, Geometry (Optional)](https://github.com/danielepanozzo/ucg/tree/master/Assignment_1)
+
+<!-- Week 1:
+
 Assignment 2: Introduction to Raytracing and Shading of Spheres (Mandatory)
 
 Week 5:
