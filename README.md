@@ -23,10 +23,6 @@ Office Hours:
 
 Office Hours: 
 * **Tuesdays** 11AM-noon, 60 5th Ave, 5th floor, Room 527
-* **Thursdays** 2-3PM, 1334 Buenos Aires Conference Room, 370 Jay St, Brooklyn, 13th floor
-* **Fridays** 2-3PM, 1334 Buenos Aires Conference Room, 370 Jay St, Brooklyn, 13th floor
-
-**Note: on 9/10 the office hours will be at 2:45-3:45pm instead**
 
 ### Lectures:
 Mondays and Wednesdays at 3:30-4:45PM
