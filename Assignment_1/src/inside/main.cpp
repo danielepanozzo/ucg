@@ -11,82 +11,44 @@ typedef std::complex<double> Point;
 typedef std::vector<Point> Polygon;
 
 double inline det(const Point &u, const Point &v) {
-	return imag(conj(u) * v);
+	// TODO
+	return 0;
 }
 
 // Return true iff [a,b] intersects [c,d], and store the intersection in ans
 bool intersect_segment(const Point &a, const Point &b, const Point &c, const Point &d, Point &ans) {
-	const double eps = 1e-10; // small epsilon for numerical precision
-	double x = det(c - a, d - c);
-	double y = det(b - a, a - c);
-	double z = det(b - a, d - c);
-	if (std::abs(z) < eps || x*z < 0 || x*z > z*z || y*z < 0 || y*z > z*z) return false;
-	ans = c + (d - c) * y / z;
+	// TODO
 	return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-Point outside(1000, 1000); // A point outside the workspace, must have "random" coordinates
 bool is_inside(const Polygon &poly, const Point &query) {
-	int n = poly.size();
-	bool tmp, ans = false;
-	for (size_t i = 0; i < poly.size(); ++i) {
-		Point m; // Coordinates of intersection point
-		tmp = intersect_segment(query, outside, poly[i], poly[(i + 1) % n], m);
-		ans = (ans != tmp);
-	}
-	return ans;
+	// 1. Compute bounding box and set coordinate of a point outside the polygon
+	// TODO
+	Point outside(0, 0);
+	// 2. Cast a ray from the query point to the 'outside' point, count number of intersections
+	// TODO
+	return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-Polygon load_obj(const std::string &filename) {
-	std::ifstream in(filename);
-	std::vector<Point> points;
-	Polygon poly;
-	char key;
-	while (in >> key) {
-		if (key == 'v') {
-			double x, y, z;
-			in >> x >> y >> z;
-			points.push_back(Point(x, y));
-		} else if (key == 'f') {
-			std::string line;
-			std::getline(in, line);
-			std::istringstream ss(line);
-			int id;
-			while (ss >> id) {
-				poly.push_back(points[id-1]);
-			}
-		}
-	}
-	return poly;
-}
-
 std::vector<Point> load_xyz(const std::string &filename) {
 	std::vector<Point> points;
 	std::ifstream in(filename);
-	int n; in >> n;
-	for (int i = 0; i < n; ++i) {
-		double x, y, z;
-		in >> x >> y  >> z;
-		points.push_back(Point(x, y));
-	}
+	// TODO
 	return points;
 }
 
-void save_xyz(const std::string &filename, std::vector<Point> &points) {
-	std::ofstream out(filename);
-	if (!out.is_open()) {
-		throw std::runtime_error("failed to open file " + filename);
-	}
-	out << std::fixed;
-	out << points.size() << '\n';
-	for (const auto &p : points) {
-		out << p.real() << ' ' << p.imag() << " 0\n";
-	}
-	out << std::endl;
+Polygon load_obj(const std::string &filename) {
+	std::ifstream in(filename);
+	// TODO
+	return {};
+}
+
+void save_xyz(const std::string &filename, const std::vector<Point> &points) {
+	// TODO
 }
 
 ////////////////////////////////////////////////////////////////////////////////
