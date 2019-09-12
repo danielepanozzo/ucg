@@ -17,12 +17,16 @@ URL: [http://cs.nyu.edu/~panozzo/](http://cs.nyu.edu/~panozzo/)
 Office Hours: 
 * **Mondays**, 1pm-2pm and by appointment, 60 5th Ave, 5th Floor, Room 504
 
-### Assistant
+### Assistants
 *Yurii Piadyk*
 [ypiadyk@nyu.edu](mailto:ypiadyk@nyu.edu)
 
-Office Hours: 
-* **Tuesdays** 11AM-noon, 60 5th Ave, 5th floor, Room 527
+Office Hours: **Tuesdays** 11AM-noon, 60 5th Ave, 5th floor, Room 527
+
+*Hanxiao Shen*
+[hs3048@nyu.edu](mailto:hs3048@nyu.edu)
+
+Office Hours: **Wednesday,Thursdays,Fridays** 11AM-noon, 60 5th Ave, 5th floor, Room 540
 
 ### Lectures:
 Mondays and Wednesdays at 3:30-4:45PM
