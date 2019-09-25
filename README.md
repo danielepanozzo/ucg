@@ -128,6 +128,8 @@ The course schedule is tentative and *will* be adjusted along the way.
 
 [Assignment 1: Introduction to C++, Geometry (Optional)](https://github.com/danielepanozzo/ucg/tree/master/Assignment_1)
 
+[Assignment 2: Introduction to Raytracing and Shading](https://github.com/danielepanozzo/ucg/tree/master/Assignment_2)
+
 <!-- Week 1:
 
 Assignment 2: Introduction to Raytracing and Shading of Spheres (Mandatory)
