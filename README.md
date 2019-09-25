@@ -79,31 +79,34 @@ The course schedule is tentative and *will* be adjusted along the way.
 
 [06 - Spatial_Data_Structures](https://www.icloud.com/keynote/072YPvX_cP5gP2etosh0eyNrQ#06_-_Spatial_Data_Structures)
 
-**Week 5: Procedural Synthesis**
-
-[07 - Procedural Synthesis](https://www.icloud.com/keynote/0dryUUM90cxhmageDDa5Yy2mA#07_-_Procedural_Synthesis)
-
-**Week 6: Midterm**
-
-**Week 7: Rasterization**
-
-[08 - 2D Transformations](https://www.icloud.com/keynote/0a5zYhqUFm7fwYRa8xr7CPblg#08_-_2D_Transformations)
-
-**Week 8: OpenGL (Part 1)**
-
-[09 - Rasterization I](https://www.icloud.com/keynote/0Wdhyk3sX-2lx0yGf2Jx5aLjQ#09_-_Rasterization_I)
-
-**Week 9: OpenGL (Part 2)**
-
-[10 - Rasterization II](https://www.icloud.com/keynote/0nA4wOS_2P2U0PIRJUBo14rng#10_-_Rasterization_II)
-
-**Week 10: Designing Interpolating Curves**
+**Week 5: Designing Interpolating Curves**
 
 [11 - Designing Interpolating Curves](https://www.icloud.com/keynote/0r02boPmRKn6ilceKhy8juRxg#11_-_Designing_Interpolating_Curves)
 
-**Week 11: Designing Approximating Curves**
+**Week 6: 2D Transformations**
+
+[08 - 2D Transformations](https://www.icloud.com/keynote/0a5zYhqUFm7fwYRa8xr7CPblg#08_-_2D_Transformations)
+
+**Week 7: Designing Approximating Curves**
 
 [12 - Designing Approximating Curves](https://www.icloud.com/keynote/0lQpdFve0-CzO1FGwWbjL2Kug#12_-_Designing_Approximating_Curves)
+
+**Week 8: Midterm**
+
+Preparation: Oct 21
+Midterm Exam: Oct 23
+
+**Week 9: OpenGL (Part 1)**
+
+[09 - Rasterization I](https://www.icloud.com/keynote/0Wdhyk3sX-2lx0yGf2Jx5aLjQ#09_-_Rasterization_I)
+
+**Week 10: OpenGL (Part 2)**
+
+[10 - Rasterization II](https://www.icloud.com/keynote/0nA4wOS_2P2U0PIRJUBo14rng#10_-_Rasterization_II)
+
+**Week 11: Procedural Synthesis**
+
+[07 - Procedural Synthesis](https://www.icloud.com/keynote/0dryUUM90cxhmageDDa5Yy2mA#07_-_Procedural_Synthesis)
 
 **Week 12: Designing Surfaces and Perspective Projection**
 
