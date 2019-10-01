@@ -1,8 +1,6 @@
 Introduction to Raytracing and Shading
 ======================================
 
-**Due Date**: Oct 1, 2019.
-
 The goal of this assignment is to implement your first ray tracer and get familiar with different shading.
 In the first exercise, you will implement a raytracer and use it to render spheres and planes with different projections.
 In the second exercise, you will extend the ray tracer to support different shading.
