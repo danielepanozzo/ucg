@@ -1,8 +1,6 @@
 Rasterization
 =============
 
-**Due Date**: TBD
-
 In this exercise you will implement a 2D editor for vector graphics.
 The editor will allow to draw simple shapes interactively.
 

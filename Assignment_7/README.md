@@ -1,8 +1,6 @@
 3D Scene Editor
 ===============
 
-**Due Date**: TBD
-
 In this exercise you will implement a 3D editor that allows to prepare 3D scenes composed of multiple3D objects.
 
 ### Using Eigen
