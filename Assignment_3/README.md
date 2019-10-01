@@ -1,8 +1,6 @@
 Basic Raytracing Effects
 ========================
 
-**Due Date**: TBD.
-
 The goal of this assignment is to implement basic ray tracing effects such as shadows, reflection, refraction and depth of field.
 
 ### Using Eigen
@@ -12,11 +10,11 @@ Have a look at the [Getting Started](http://eigen.tuxfamily.org/dox/GettingStart
 
 ### Preparing the Environment
 
-Follow instructions the [general rules](https://github.com/nyu-cg-fall-17/computer-graphics/blob/master/RULES.md) to setup what you need for the assignment.
+Follow instructions the general rules to setup what you need for the assignment.
 
 ### Submission
 
-Please refer to [this section](https://github.com/nyu-cg-fall-17/computer-graphics/blob/master/RULES.md#what-to-hand-in) of the general rules for more details on what to hand in.
+Please refer to general rules for more details on what to hand in.
 
 
 Ex.0: Field of View and Perspective Camera
@@ -77,11 +75,11 @@ To implement a depth of field effect, you will need average the contribution of 
 Starting Code
 -------------
 
-After compiling the code following the process described in the [general instructions](https://github.com/nyu-cg-fall-17/computer-graphics/RULES.md), you can launch the program from command-line as follows:
+After compiling the code following the process described in the general instructions, you can launch the program from command-line as follows:
 
 ```
 mkdir build; cd build; cmake ..; make
-./assignment2 ../data/scene.json
+./assignment3 ../data/scene.json
 ```
 Once you complete the assignment, you should see result a picture generated in your folder.
 
