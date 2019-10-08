@@ -133,43 +133,6 @@ Midterm Exam: Oct 23
 
 [Assignment 2: Introduction to Raytracing and Shading](https://github.com/danielepanozzo/ucg/tree/master/Assignment_2)
 
-<!-- Week 1:
+[Assignment 3: Basic Raytracing Effects](https://github.com/danielepanozzo/ucg/tree/master/Assignment_3)
 
-Assignment 2: Introduction to Raytracing and Shading of Spheres (Mandatory)
-
-Week 5:
-Assignment 3: Ray Tracing Triangles, Octree, and Textures (Mandatory) + Bonus for Loading
-
-Week 8:
-Assignment 4: Interactive OpenGL Rasterization in 2D (Mandatory)
-
-Week 11:
-Assignment 5: 3D Scene Editor, or Individual Project (Mandatory) -->
-
-
-<!-- * [General Guidelines](Assignment_1/requirements/General_Rules.pdf) [(latex)](Assignment_1/requirements/General_Rules.tex)
-
-* [Assignment 1: Ray Tracing](Assignment_1/requirements/Assignment-1_Ray_Tracing.pdf) [(latex)](Assignment_1/requirements/Assignment-1_Ray_Tracing.tex)
-
-* [Assignment 2: 2D Vector Graphics Editor](Assignment_2/requirements/Assignment-2_2D_Editor.pdf) [(latex)](Assignment_2/requirements/Assignment-2_2D_Editor.tex)
-
-* [Assignment 3: 3D Scene Editor](Assignment_3/requirements/Assignment3_3D.pdf) [(latex)](Assignment_2/requirements/Assignment3_3D.tex)
-  
-* [Assignment 4: Final Project](Assignment_4/requirements/Assignment4.pdf) -->
-
-<!-- # Compilation Instructions
-
-```bash
-git clone --recursive https://github.com/NYUCG2017/assignment-N-username # --recursive flag is necessary for dependencies
-cd assignment-N-username
-mkdir build
-cd build
-cmake ../ # re-run cmake when you add/delete source files
-make
-```
-You can substitute `cmake ../` with the following to make the program run faster
-```bash
-cmake -DCMAKE_BUILD_TYPE=Release ../ # use this cmake command instead of the previous linefor faster run
-```
-
-If you are looking for an IDE, I suggest to use [VSCode](https://code.visualstudio.com) or [CLion](https://www.jetbrains.com/clion/) on Linux and MacOSX. On Windows, I recommend to use [Visual Studio 2019](https://visualstudio.microsoft.com/vs/). -->
+[Assignment 4: Ray Tracing Triangle Meshes and AABB Trees](https://github.com/danielepanozzo/ucg/tree/master/Assignment_4)
