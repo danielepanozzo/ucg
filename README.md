@@ -98,6 +98,8 @@ Midterm Exam: Oct 23
 
 **Week 9: OpenGL (Part 1)**
 
+[18 - Viewing Transformations and Intro to Rasterization](https://www.icloud.com/keynote/0IdGO25TTiu2mpW2Td-fuxlww#18_-_Viewing_Transformations,_Rasterization)
+
 [09 - Rasterization I](https://www.icloud.com/keynote/0Wdhyk3sX-2lx0yGf2Jx5aLjQ#09_-_Rasterization_I)
 
 **Week 10: OpenGL (Part 2)**
