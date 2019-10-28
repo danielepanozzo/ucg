@@ -82,7 +82,7 @@ After compiling the code following the process described in the [general instruc
 
 ```
 mkdir build; cd build; cmake ..; make
-./assignment3 ../data/scene.json
+./assignment4 ../data/scene.json
 ```
 Once you complete the assignment, you should see result a picture generated in your folder.
 
