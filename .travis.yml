@@ -43,12 +43,6 @@ matrix:
         - cmake  ../
         - make -j 2
         - cd ../../
-        - cd Assignment_7
-        - mkdir build
-        - cd build
-        - cmake  ../
-        - make -j 2
-        - cd ../../
       addons:
         apt:
           sources:
@@ -95,12 +89,6 @@ matrix:
         - make -j 2
         - cd ../../
         - cd Assignment_6
-        - mkdir build
-        - cd build
-        - cmake ../
-        - make -j 2
-        - cd ../../
-        - cd Assignment_7
         - mkdir build
         - cd build
         - cmake ../
