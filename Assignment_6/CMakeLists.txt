@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(assignment6)
+project(assignment7)
 
 ################################################################################
 
@@ -33,3 +33,7 @@ target_link_libraries(${PROJECT_NAME} glfw)
 # Include glad
 add_subdirectory("${THIRD_PARTY_DIR}/glad" glad)
 target_link_libraries(${PROJECT_NAME} glad)
+
+# Folder where data files are stored (meshes & stuff)
+set(DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/data/")
+target_compile_definitions(${PROJECT_NAME} PUBLIC -DDATA_DIR=\"${DATA_DIR}\")

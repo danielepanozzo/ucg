@@ -4,6 +4,30 @@
 #include <fstream>
 ////////////////////////////////////////////////////////////////////////////////
 
+void VertexBufferObject::init(GLenum st, GLenum bt) {
+	scalar_type = st;
+	buffer_type = bt;
+	glGenBuffers(1, &id);
+	check_gl_error();
+}
+
+void VertexBufferObject::bind() {
+	glBindBuffer(this->buffer_type, id);
+	check_gl_error();
+}
+
+void VertexBufferObject::unbind() {
+	glBindBuffer(this->buffer_type, 0);
+	check_gl_error();
+}
+
+void VertexBufferObject::free() {
+	glDeleteBuffers(1, &id);
+	check_gl_error();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
 void VertexArrayObject::init() {
 	glGenVertexArrays(1, &id);
 	check_gl_error();
@@ -14,36 +38,16 @@ void VertexArrayObject::bind() {
 	check_gl_error();
 }
 
+void VertexArrayObject::unbind() {
+	glBindVertexArray(0);
+	check_gl_error();
+}
+
 void VertexArrayObject::free() {
 	glDeleteVertexArrays(1, &id);
 	check_gl_error();
 }
 
-////////////////////////////////////////////////////////////////////////////////
-
-void VertexBufferObject::init() {
-	glGenBuffers(1,&id);
-	check_gl_error();
-}
-
-void VertexBufferObject::bind() {
-	glBindBuffer(GL_ARRAY_BUFFER,id);
-	check_gl_error();
-}
-
-void VertexBufferObject::free() {
-	glDeleteBuffers(1,&id);
-	check_gl_error();
-}
-
-void VertexBufferObject::update(const Eigen::MatrixXf& M) {
-	assert(id != 0);
-	glBindBuffer(GL_ARRAY_BUFFER, id);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*M.size(), M.data(), GL_DYNAMIC_DRAW);
-	rows = M.rows();
-	cols = M.cols();
-	check_gl_error();
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +111,7 @@ GLint Program::bindVertexAttribArray(const std::string &name, VertexBufferObject
 	}
 	VBO.bind();
 	glEnableVertexAttribArray(id);
-	glVertexAttribPointer(id, VBO.rows, GL_FLOAT, GL_FALSE, 0, 0);
+	glVertexAttribPointer(id, VBO.rows, VBO.scalar_type, GL_FALSE, 0, 0);
 	check_gl_error();
 
 	return id;
