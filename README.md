@@ -16,6 +16,7 @@ URL: [http://cs.nyu.edu/~panozzo/](http://cs.nyu.edu/~panozzo/)
 
 Office Hours: 
 * **Mondays**, 1pm-2pm and by appointment, 60 5th Ave, 5th Floor, Room 504
+* **Wednesdays**, 6pm-7pm and by appointment, 60 5th Ave, 5th Floor, Room 504
 
 ### Assistants
 *Yurii Piadyk*
