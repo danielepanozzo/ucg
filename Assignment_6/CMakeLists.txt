@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(assignment7)
+project(assignment6)
 
 ################################################################################
 
