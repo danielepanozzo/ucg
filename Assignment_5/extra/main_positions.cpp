@@ -155,7 +155,7 @@ int main(void) {
 		out vec4 outColor;
 
 		void main() {
-		    outColor = vec4(triangleColor, 1.0);
+		    outColor = vec4(gl_FragCoord.x/640*2, gl_FragCoord.y/480, 0.4 - gl_FragCoord.x/640 - gl_FragCoord.y/480, 1.0);
 		}
 	)";
 

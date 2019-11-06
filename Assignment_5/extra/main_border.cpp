@@ -207,6 +207,12 @@ int main(void) {
 		// Draw a triangle
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
+		// Change the color to white
+        glUniform3f(program.uniform("triangleColor"), 1.0f, 1.0f, 1.0f);
+
+        // Draw a triangle
+        glDrawArrays(GL_LINE_LOOP, 0, 3);
+
 		// Swap front and back buffers
 		glfwSwapBuffers(window);
 
