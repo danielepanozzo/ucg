@@ -17,6 +17,9 @@ VertexBufferObject VBO;
 // Contains the vertex positions
 Eigen::MatrixXf V(2,3);
 
+// Contains the view transformation
+Eigen::Matrix4f view(4,4);
+
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
 	// Get viewport size (canvas in number of pixels)
 	int width, height;
@@ -36,12 +39,14 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 	ypos *= highdpi;
 
 	// Convert screen position to world coordinates
-	double xworld = ((xpos/double(width))*2)-1;
-	double yworld = (((height-1-ypos)/double(height))*2)-1; // NOTE: y axis is flipped in glfw
+	Eigen::Vector4f p_screen(xpos,height-1-ypos,0,1);
+    Eigen::Vector4f p_canonical((p_screen[0]/width)*2-1,(p_screen[1]/height)*2-1,0,1);
+    Eigen::Vector4f p_world = view.inverse()*p_canonical;
+
 
 	// Update the position of the first vertex if the left button is pressed
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
-		V.col(0) << xworld, yworld;
+		V.col(0) << p_world[0], p_world[1];
 	}
 
 	// Upload the change to the GPU
@@ -137,9 +142,9 @@ int main(void) {
 		#version 150 core
 
 		in vec2 position;
-
+		uniform mat4 view;
 		void main() {
-			gl_Position = vec4(position, 0.0, 1.0);
+			gl_Position = view * vec4(position, 0.0, 1.0);
 		}
 	)";
 
@@ -150,7 +155,7 @@ int main(void) {
 		out vec4 outColor;
 
 		void main() {
-		    outColor = vec4(gl_FragCoord.x/640*2, gl_FragCoord.y/480, 0.4 - gl_FragCoord.x/640 - gl_FragCoord.y/480, 1.0);
+		    outColor = vec4(triangleColor, 1.0);
 		}
 	)";
 
@@ -191,6 +196,16 @@ int main(void) {
 		auto t_now = std::chrono::high_resolution_clock::now();
 		float time = std::chrono::duration_cast<std::chrono::duration<float>>(t_now - t_start).count();
 		glUniform3f(program.uniform("triangleColor"), (float)(sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
+
+        float aspect_ratio = float(height)/float(width); // corresponds to the necessary width scaling
+
+        view <<
+        aspect_ratio,0, 0, 0,
+        0,           1, 0, 0,
+        0,           0, 1, 0,
+        0,           0, 0, 1;
+
+        glUniformMatrix4fv(program.uniform("view"), 1, GL_FALSE, view.data());
 
 		// Clear the framebuffer
 		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);

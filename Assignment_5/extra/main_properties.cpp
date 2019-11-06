@@ -13,9 +13,13 @@
 
 // VertexBufferObject wrapper
 VertexBufferObject VBO;
+VertexBufferObject VBO_C;
 
 // Contains the vertex positions
 Eigen::MatrixXf V(2,3);
+
+// Contains the per-vertex color
+Eigen::MatrixXf C(3,3);
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
 	// Get viewport size (canvas in number of pixels)
@@ -129,6 +133,17 @@ int main(void) {
 	V << 0,  0.5, -0.5, 0.5, -0.5, -0.5;
 	VBO.update(V);
 
+	// Second VBO for colors
+    VBO_C.init();
+
+    C.resize(3,3);
+    C <<
+    1,  0, 0,
+    0,  1, 0,
+    0,  0, 1;
+
+    VBO_C.update(C);
+
 	// Initialize the OpenGL Program
 	// A program controls the OpenGL pipeline and it must contains
 	// at least a vertex shader and a fragment shader to be valid
@@ -137,20 +152,23 @@ int main(void) {
 		#version 150 core
 
 		in vec2 position;
-
+		in vec3 color;
+        out vec3 f_color;
 		void main() {
 			gl_Position = vec4(position, 0.0, 1.0);
+			f_color = color;
 		}
 	)";
 
 	const GLchar* fragment_shader = R"(
 		#version 150 core
+		in vec3 f_color;
 
 		uniform vec3 triangleColor;
 		out vec4 outColor;
 
 		void main() {
-		    outColor = vec4(gl_FragCoord.x/640*2, gl_FragCoord.y/480, 0.4 - gl_FragCoord.x/640 - gl_FragCoord.y/480, 1.0);
+		    outColor = vec4(f_color, 1.0);
 		}
 	)";
 
@@ -164,6 +182,7 @@ int main(void) {
 	// The following line connects the VBO we defined above with the position "slot"
 	// in the vertex shader
 	program.bindVertexAttribArray("position", VBO);
+	program.bindVertexAttribArray("color",VBO_C);
 
 	// Save the current time --- it will be used to dynamically change the triangle color
 	auto t_start = std::chrono::high_resolution_clock::now();
