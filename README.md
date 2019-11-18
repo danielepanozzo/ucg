@@ -107,19 +107,19 @@ Midterm Exam: Oct 23
 
 [10 - Rasterization II](https://www.icloud.com/keynote/0nA4wOS_2P2U0PIRJUBo14rng#10_-_Rasterization_II)
 
-**Week 11: Procedural Synthesis**
+**Week 11: Texture Mapping and Perspective Projection**
 
-[07 - Procedural Synthesis](https://www.icloud.com/keynote/0dryUUM90cxhmageDDa5Yy2mA#07_-_Procedural_Synthesis)
-
-**Week 12: Designing Surfaces and Perspective Projection**
-
-[13 - Designing Surfaces](https://www.icloud.com/keynote/0V1c8sgep_Q5kjXNbHcvkwu3g#13_-_Designing_Surfaces)
+[15 - Texture Mapping](https://www.icloud.com/keynote/0PKZcw0DbwsmqrB3dWjyvsKGg#15_-_Texture_Mapping)
 
 [14 - Perspective Projection](https://www.icloud.com/keynote/0Op2C9HU_JXUTZYUhfBny5P7Q#14_-_Perspective_Projection)
 
-**Week 13: Texture Mapping and Animation**
+**Week 12: Designing Curves and Surfaces**
 
-[15 - Texture Mapping](https://www.icloud.com/keynote/0PKZcw0DbwsmqrB3dWjyvsKGg#15_-_Texture_Mapping)
+[13 - Designing Surfaces](https://www.icloud.com/keynote/0V1c8sgep_Q5kjXNbHcvkwu3g#13_-_Designing_Surfaces)
+
+**Week 13: Designing Textures and Deformations**
+
+[07 - Procedural Synthesis](https://www.icloud.com/keynote/0dryUUM90cxhmageDDa5Yy2mA#07_-_Procedural_Synthesis)
 
 [16 - Spatial and Skeletal Deformation](https://www.icloud.com/keynote/0ThsN9Nx8Vrw5bwDexl9a9V0w#16_-_Spatial_and_Skeletal_Deformations)
 
