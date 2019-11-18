@@ -139,3 +139,5 @@ Midterm Exam: Oct 23
 [Assignment 3: Basic Raytracing Effects (Optional)](https://github.com/danielepanozzo/ucg/tree/master/Assignment_3)
 
 [Assignment 4: Ray Tracing Triangle Meshes and AABB Trees](https://github.com/danielepanozzo/ucg/tree/master/Assignment_4)
+
+[Assignment 5: Rasterization I](https://github.com/danielepanozzo/ucg/tree/master/Assignment_5)
