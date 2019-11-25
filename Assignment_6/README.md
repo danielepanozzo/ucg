@@ -75,7 +75,7 @@ You should reuse the ray-triangle intersection code from the ray-tracing assignm
 Note that, because vertex coordinates are transformed by a different object matrix **M** in the vertex shader (from object space to world space), you should compute the ray parameter **(e, d)** in the canonical viewing volume (same as the world space for this exercise), transform the parameters by **M<sup>-1</sup>**, compute the intersection in object space, and then transform back the intersection point from the object space to the world space.
 
 
-Ex.4: Object Control (Optional 2.5 pts)
+Ex.4: Object Control (Optional 5.0 pts)
 --------------------
 
 When an object is selected, it should be possible to translate it, rotate it around its barycenter, and rescale it without changing its barycenter. These extra transformation matrices should be combined with the initial rescaling/translation operation performed in Exercise 1. In other words, the final object transformation can be written as **M** = **T×R×S×S0×T0**, where **S0** and **T0** are the initial scaling and translation applied to center the object around its unit box, and **T**, **R** and **S** are the editable transformation matrices that you will modify in this exercise.
