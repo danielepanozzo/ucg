@@ -72,7 +72,7 @@ Ex.3: Object Selection
 Implement object selection in the viewer. Clicking on a object will select the object, changing its color.
 You should reuse the ray-triangle intersection code from the ray-tracing assignments, and implement this operation using ray-casting.
 
-Note that, because vertex coordinates are transformed by a different object matrix **M** in the vertex shader (from object space to world space), you should compute the ray parameter **(e, d)** in the canonical viewing volume (same as the world space for this exercise), transform the parameters by **M<sup>-1</sup>** (remember to apply only the linear part of **M<sup>-1</sup>** to **d**), compute the intersection in object space, and then transform back the intersection point from the object space to the world space.
+Note that, because vertex coordinates are transformed by a different object matrix **M** in the vertex shader (from object space to world space), you should compute the ray parameter **(e, d)** in the canonical viewing volume (same as the world space for this exercise), transform the parameters by **M<sup>-1</sup>**, compute the intersection in object space, and then transform back the intersection point from the object space to the world space.
 
 
 Ex.4: Object Control (Optional 2.5 pts)
@@ -84,7 +84,7 @@ All these actions should be associated to keyboard keys (and the choice of keys 
 Each object should also have a rendering setting associated with it, which can be either wireframe, flat shading, or phong shading, as implemented in Exercise 2. When an object is selected, it must be possible to switch between the different rendering modes by pressing three keys on the keyboard.
 
 
-Ex.5: Camera Control (Optional 2.5 pts)
+Ex.5: Camera Control (Optional 5.0 pts)
 -------------------------------
 
 Add the possibility to translate the position of the camera (similarly to the Assignment 5), but in this exercise the camera should always *point to the origin*. It should be possible to move it around, but the camera should always face the origin.
