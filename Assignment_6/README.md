@@ -43,9 +43,6 @@ Implement an interactive application that allows to add, edit, and delete 3D mes
 
 Note that you can have multiple copies of the same object in the scene, and each copy can have its own position, scale, and rotation.
 
-For this exercise and the next, all transformations **must** be done in the shader. The VBO containing the vertex positions of each object should be uploaded only once to the GPU. Remember to pass `GL_FALSE` as the 3rd argument to [`glUniformMatrix4fv`](http://docs.gl/gl3/glUniform), as matrices in Eigen are stored column-major by default.
-
-
 Ex.2: Shading
 -------------
 
@@ -77,6 +74,8 @@ Note that, because vertex coordinates are transformed by a different object matr
 
 Ex.4: Object Control (Optional 5.0 pts)
 --------------------
+
+For this exercise and the next, all transformations **must** be done in the shader. The VBO containing the vertex positions of each object should be uploaded only once to the GPU. Remember to pass `GL_FALSE` as the 3rd argument to [`glUniformMatrix4fv`](http://docs.gl/gl3/glUniform), as matrices in Eigen are stored column-major by default.
 
 When an object is selected, it should be possible to translate it, rotate it around its barycenter, and rescale it without changing its barycenter. These extra transformation matrices should be combined with the initial rescaling/translation operation performed in Exercise 1. In other words, the final object transformation can be written as **M** = **T×R×S×S0×T0**, where **S0** and **T0** are the initial scaling and translation applied to center the object around its unit box, and **T**, **R** and **S** are the editable transformation matrices that you will modify in this exercise.
 
