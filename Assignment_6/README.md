@@ -35,7 +35,7 @@ Ex.1: Scene Editor
 
 Implement an interactive application that allows to add, edit, and delete 3D meshes. New objects can be added to the scene in three ways:
 
-- The key <kbd>1</kbd> will add a unit cube in the origin. The coordinates of the cube should be specified directly in the C++ source code.
+- The key <kbd>1</kbd> will add a unit cube in the origin. 
 
 - The key <kbd>2</kbd> will import a new copy of the mesh `bumpy_cube.off`, scale it to fit into a unit cube and center it on the origin.
 
